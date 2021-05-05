@@ -19,9 +19,20 @@
 
     <div class="contenido colunma">
         <div class="formularioContacto2">
-            <div class="texto">
-                <h3>- Gana Dinero a tu viaje en Estados Unidos</h3>
-                <h3>Compra los producos que quieren nuestros clientes y gana asombrosas comisiones</h3>
+            <div class="carusel">
+                <carousel [cellsToShow]="1" [height]="400">
+                    <div class="carousel-cell tips">
+                        <div class="fondo4">
+                            <h2>Gana dinero en tu viaje a Estados Unidos</h2>
+                        </div>
+
+                    </div>
+                    <div class="carousel-cell tips">
+                        <div class="fondo5">
+                            <h2>Compra los productos de nuestros clientes y gana asombrosas comisiones</h2>
+                        </div>
+                    </div>
+                </carousel>
             </div>
             <div class="formulario">
                 <div class="datos">
@@ -40,18 +51,39 @@
 
         <div class="divTitulo3">
 
-            <div class="tarjetasPlanes">
+            <div class="tarjetasPlanes fondo3" >
 
                 <div class="personal">
                     <h3>Pago Garantizado</h3>
+                    <div class="star">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
                 </div>
 
                 <div class="personal">
                     <h3>Ingreso en 24 horas de haber realizado la entrega</h3>
+                    <div class="star">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
                 </div>
 
                 <div class="personal">
                     <h3>Sin comisiones, Solo Ganacias</h3>
+                    <div class="star">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,24 +92,15 @@
             <h2>Como ganar dinero en este viaje</h2>
         </div>
         <div class="cuadros">
-            <div class="cuadro">
-
-            </div>
             <div class="cuadro2">
                 <h3>Registra Tu Viaje</h3>
 
             </div>
-            <div class="cuadro2 cuarto">
+            <div class="cuadro3">
                 <h3>Compra el Producto Indicado</h3>
 
             </div>
-            <div class="cuadro tercero">
-
-            </div>
-            <div class="cuadro">
-
-            </div>
-            <div class="cuadro2">
+            <div class="cuadro4">
                 <h3>Entrega el producto y recibe el pago de lo que compraste mas tu comision</h3>
 
             </div>
@@ -85,75 +108,38 @@
 
 
 
+        <div class="franja2">
+            <h2>Opinion de Nuestro Clientes</h2>
+        </div>
         <div class="divSlider">
-            <h2>Opiniones de Nuestros Clientes</h2>
-            <div id="slider">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-                <div id="slides">
-                    <div id="overflow">
-                        <div class="inner">
-                            <div class="slide slide_1">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolores unde
-                                        ratione deleniti vel excepturi maiores illum enim possimus ipsa, placeat
-                                        molestiae, non voluptate saepe. Error esse suscipit vel nihil!</p>
-                                    <p class="autor">Lorem ipsum
-                                    </p>
-                                    <p class="autor">Lorem ipsum</p>
-                                </div>
-                            </div>
-                            <div class="slide slide_2">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolores unde
-                                        ratione deleniti vel excepturi maiores illum enim possimus ipsa, placeat
-                                        molestiae, non voluptate saepe. Error esse suscipit vel nihil!</p>
-                                    <p class="autor">Lorem ipsum
-                                    </p>
-                                    <p class="autor">Lorem ipsum</p>
-                                </div>
-                            </div>
-                            <div class="slide slide_3">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolores unde
-                                        ratione deleniti vel excepturi maiores illum enim possimus ipsa, placeat
-                                        molestiae, non voluptate saepe. Error esse suscipit vel nihil!</p>
-                                    <p class="autor">Lorem ipsum
-                                    </p>
-                                    <p class="autor">Lorem ipsum</p>
-                                </div>
-                            </div>
-                            <div class="slide slide_4">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolores unde
-                                        ratione deleniti vel excepturi maiores illum enim possimus ipsa, placeat
-                                        molestiae, non voluptate saepe. Error esse suscipit vel nihil!</p>
-                                    <p class="autor">Lorem ipsum
-                                    </p>
-                                    <p class="autor">Lorem ipsum</p>
-                                </div>
-                            </div>
+            <div class="carusel">
+                <carousel [cellsToShow]="1" [height]="400">
+                    <div class="carousel-cell opiniones">
+                        <div class="fondo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
+                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
+                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
+                            <h3>Lorem ipsum</h3>
+                        </div>
+
+                    </div>
+                    <div class="carousel-cell opiniones">
+                        <div class="fondo2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
+                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
+                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
+                            <h3>Lorem ipsum</h3>
                         </div>
                     </div>
-                </div>
-                <div id="controls">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                    <label for="slide4"></label>
-                </div>
-                <div id="bullets">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                    <label for="slide4"></label>
-                </div>
+                    <div class="carousel-cell opiniones">
+                        <div class="fondo3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
+                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
+                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
+                            <h3>Lorem ipsum</h3>
+                        </div>
+                    </div>
+                </carousel>
             </div>
         </div>
 

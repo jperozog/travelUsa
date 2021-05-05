@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-viajeros',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viajeros.component.scss']
 })
 export class ViajerosComponent implements OnInit {
-
+  faStar = faStar;
   constructor() { }
 
   ngOnInit(): void {

@@ -29,10 +29,25 @@
                 </div>
 
             </div>
-            <div class="texto">
-                <h3>- Compra con nuestra empresa cosas de USA y ahora!!</h3>
-                <h3>- Te conectamos con viajeros para que traigan tu pedido</h3>
-                <h3>- Recibe tu pedido en 2 semanas</h3>
+            <div class="carusel">
+                <carousel [cellsToShow]="1" [height]="400">
+                    <div class="carousel-cell tips">
+                        <div class="fondo">
+                            <h2>Compra con nuestra empresa cosas de USA y ahora!!</h2>
+                        </div>
+
+                    </div>
+                    <div class="carousel-cell tips">
+                        <div class="fondo2">
+                            <h2>Te conectamos con viajeros para que traigan tu pedido</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-cell tips">
+                        <div class="fondo3">
+                            <h2> Recibe tu pedido en 2 semanas</h2>
+                        </div>
+                    </div>
+                </carousel>
             </div>
 
         </div>
@@ -44,14 +59,36 @@
 
                 <div class="personal">
                     <h3>Garantia de entrega del producto</h3>
+                    <div class="star">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
+
                 </div>
 
                 <div class="personal">
                     <h3>Pagos seguros</h3>
+                    <div class="star">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
                 </div>
 
                 <div class="personal">
-                    <h3>Viajeros verificados comprarn por ti</h3>
+                    <h3>Viajeros verificados compran por ti</h3>
+                    <div class="star">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                        <fa-icon [icon]="faStar"></fa-icon>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,81 +146,67 @@
                 </p>
             </div>
 
+            <div class="cuadro">
+                <img class="img-responsive" src="assets/img/Imagen.png">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
+                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
+                    neque est!
+                </p>
+            </div>
+            <div class="cuadro">
+                <img class="img-responsive" src="assets/img/Imagen.png">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
+                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
+                    neque est!
+                </p>
+            </div>
+            <div class="cuadro">
+                <img class="img-responsive" src="assets/img/Imagen.png">
+                <h3>Lorem ipsum dolor sit</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
+                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
+                    neque est!
+                </p>
+            </div>
+
 
         </div>
 
 
-
+        <div class="franja2">
+            <h2>Opinion de Nuestro Clientes</h2>
+        </div>
         <div class="divSlider">
-            <h2>Opiniones de Nuestros Clientes</h2>
-            <div id="slider">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-                <div id="slides">
-                    <div id="overflow">
-                        <div class="inner">
-                            <div class="slide slide_1">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Me encantó ver, al instante, los clientes y proveedores que están en las listas
-                                        negras del SAT. Con docX360 es súper fácil. Raúl Ramo</p>
-                                    <p class="autor">Director General
-                                    </p>
-                                    <p class="autor">Gefrieren S.A.</p>
-                                </div>
-                            </div>
-                            <div class="slide slide_2">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Ahora tengo una película mucho mas clara y en Fempo real de las empresas que
-                                        administro. Con docX360 ubico cualquier diferencia o discrepancia en los
-                                        ingresos y egresos. Incluso se, cuanto traemos en cuentas X cobrar y pagar.</p>
-                                    <p class="autor">Javier Marinez
-                                    </p>
-                                    <p class="autor">CP Suministros</p>
-                                </div>
-                            </div>
-                            <div class="slide slide_3">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Todos decimos conocer nuestra operación, hasta que aparece una invitación en
-                                        nuestro buzón del SAT. Con docX360 realmente tengo el control; puedo tomar
-                                        decisiones al instante. El año pasado pude planear el cierre fiscal a mi favor.
-                                    </p>
-                                    <p class="autor">Maru Munguía
-                                    </p>
-                                    <p class="autor">CEO TechBoard SAS</p>
-                                </div>
-                            </div>
-                            <div class="slide slide_4">
-                                <div class="slide-content">
-                                    <img class="img-responsive" src="assets/img/user.png">
-                                    <p>Un reporte que tomaba semanas, para presupuestar nuestro gasto nominal, hoy lo
-                                        obtengo de inmediato con docX360.</p>
-                                    <p class="autor">Lilia Flores
-                                    </p>
-                                    <p class="autor">
-                                        Nómina SHF
-                                    </p>
-                                </div>
-                            </div>
+            <div class="carusel">
+                <carousel [cellsToShow]="1" [height]="400">
+                    <div class="carousel-cell opiniones">
+                        <div class="fondo">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
+                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
+                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
+                            <h3>Lorem ipsum</h3>
+                        </div>
+
+                    </div>
+                    <div class="carousel-cell opiniones">
+                        <div class="fondo2">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
+                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
+                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
+                            <h3>Lorem ipsum</h3>
                         </div>
                     </div>
-                </div>
-                <div id="controls">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                    <label for="slide4"></label>
-                </div>
-                <div id="bullets">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                    <label for="slide4"></label>
-                </div>
+                    <div class="carousel-cell opiniones">
+                        <div class="fondo3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
+                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
+                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
+                            <h3>Lorem ipsum</h3>
+                        </div>
+                    </div>
+                </carousel>
             </div>
         </div>
 
