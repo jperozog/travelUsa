@@ -3,14 +3,20 @@
 
     <div class="navbar">
         <div class="izquierda-derecha">
+            <div class="izquierda">
+                <div class="divLogo">
+                    <img class="img-responsive" src="assets/img/brinker.png">
+                </div>
+
+            </div>
             <div class="derecha">
                 <div id="menu">
                     <input type="checkbox" id="check">
                     <label for="check" class="checkbtn">
                     </label>
                     <ul>
-                        <li><a class="selected" routerLink="/">Compras</a></li>
-                        <li><a routerLink="/viajes">Viajes</a></li>
+                        <li><a class="selected" routerLink="/">Voy a a Viajar</a></li>
+                        <li><a routerLink="/viajes">Voy a viajar, quiero ser Brinker</a></li>
                     </ul>
                 </div>
             </div>
@@ -33,18 +39,19 @@
                 <carousel [cellsToShow]="1" [height]="400">
                     <div class="carousel-cell tips">
                         <div class="fondo">
-                            <h2>Compra con nuestra empresa cosas de USA y ahora!!</h2>
+                            <h2>Compra en USA, un BRINKER comprará y traerá tu producto</h2>
                         </div>
 
                     </div>
                     <div class="carousel-cell tips">
-                        <div class="fondo2">
-                            <h2>Te conectamos con viajeros para que traigan tu pedido</h2>
+                        <div class="fondo3">
+                            <h2> Sin costos ni trámites aduanales</h2>
                         </div>
                     </div>
                     <div class="carousel-cell tips">
-                        <div class="fondo3">
-                            <h2> Recibe tu pedido en 2 semanas</h2>
+                        <div class="fondo2">
+                            <h2>Estás protegido de principio a fin. Recibe tu pedido según lo acordado o recupera el
+                                100% de tu dinero.</h2>
                         </div>
                     </div>
                 </carousel>
@@ -58,7 +65,7 @@
             <div class="tarjetasPlanes">
 
                 <div class="personal">
-                    <h3>Garantia de entrega del producto</h3>
+                    <h3>Garantía de entrega del producto</h3>
                     <div class="star">
                         <fa-icon [icon]="faStar"></fa-icon>
                         <fa-icon [icon]="faStar"></fa-icon>
@@ -94,81 +101,59 @@
         </div>
 
         <div class="franja2">
-            <h2>Productos</h2>
+            <h2>Productos más vendidos</h2>
         </div>
         <div class="cuadros2">
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://m.media-amazon.com/images/I/71XXJC7V8tL._FMwebp__.jpg');"
+                class="cuadro">
+
+                <h3>New Apple iPhone 12 Pro Max (128GB, Graphite)</h3>
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/71zny7BTRlL._AC_SL1500_.jpg');"
+                class="cuadro">
+                <h3>
+                    AirPods Pro de Apple</h3>
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/71bElkQQ7LL._AC_SL1500_.jpg');"
+                class="cuadro">
+
+                <h3>Computadora Apple MacBook Pro</h3>
+
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/713veY5LJSL._AC_SL1000_.jpg');"
+                class="cuadro">
+
+                <h3>Kirkland Signature Minoxidil para hombre 5% extra fuerte pelo para hombre, 12 meses de suministro
+                </h3>
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/61TYbu1%2BqgL._SL1500_.jpg');"
+                class="cuadro">
+                <h3>Kirkland Signature - Mantequilla de nueces mix</h3>
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/61wwiGxFwML._AC_SL1082_.jpg');"
+                class="cuadro">
+
+                <h3>Tumbas Relief</h3>
+
             </div>
 
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/610OPJMuQ8S._AC_SL1500_.jpg');"
+                class="cuadro">
+                <h3>Desitin Crema para pañales de bebé de máxima resistencia con 40% óxido de zinc para tratamiento,
+                    alivio y prevención</h3>
+
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/61lHou2GzvL._AC_SL1000_.jpg');"
+                class="cuadro">
+                <h3>Nuevo Echo Dot (4ta Generación) | Parlante inteligente con reloj y Alexa</h3>
+
             </div>
-            <div class="cuadro">
-                <img class="img-responsive" src="assets/img/Imagen.png">
-                <h3>Lorem ipsum dolor sit</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore molestiae culpa quo dolores corporis
-                    eum velit optio, magnam deserunt ipsum voluptas eius modi, tenetur repellat veritatis ratione saepe
-                    neque est!
-                </p>
+            <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/91cP26OyYaL._AC_SL1500_.jpg');"
+                class="cuadro">
+                <h3>
+                    Juego de 120 bloques magnéticos 3D para construcción, juguetes con imán para niños, juguetes
+                    educativos para niños</h3>
+
             </div>
 
 
@@ -183,27 +168,21 @@
                 <carousel [cellsToShow]="1" [height]="400">
                     <div class="carousel-cell opiniones">
                         <div class="fondo">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
-                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
-                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
-                            <h3>Lorem ipsum</h3>
+                            <p>Compré cosas para mi bebé, llegaron súper rápido y en buen estado. Muchas Gracias</p>
+                            <h3>Jackelin G</h3>
                         </div>
 
                     </div>
                     <div class="carousel-cell opiniones">
                         <div class="fondo2">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
-                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
-                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
-                            <h3>Lorem ipsum</h3>
+                            <p>¡Por fin pude renovar mi IPhone!!! Comprarlo en USA es mucho más barato!</p>
+                            <h3>Javier B</h3>
                         </div>
                     </div>
                     <div class="carousel-cell opiniones">
                         <div class="fondo3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
-                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
-                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
-                            <h3>Lorem ipsum</h3>
+                            <p>¡Compré mis zapatillas especiales para correr que acá no venden!</p>
+                            <h3>Evelyne R</h3>
                         </div>
                     </div>
                 </carousel>
@@ -236,37 +215,15 @@
                 <div class="listaPreguntas">
                     <div id="menu">
                         <ul>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-
+                            <li *ngFor="let l of general" id="{{l.id}}"><a id="{{l.id+100}}" (click)="seleccionarPregunta(l.id)" >{{l.pregunta}}</a></li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="descripcioPregunta">
                     <div>
-                        <h4>Lorem ipsum </h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat est reprehenderit
-                            perferendis consequuntur consequatur deleniti? Facere at unde, tempora dolor, maiores in
-                            sed, quidem corrupti mollitia odio ratione alias!</p>
+                        <h4>{{tituloSeleccionado}} </h4>
+                        <p>{{contenidoSeleccionado}}</p>
                     </div>
                 </div>
             </div>

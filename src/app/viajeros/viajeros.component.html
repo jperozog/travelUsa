@@ -3,14 +3,20 @@
 
     <div class="navbar">
         <div class="izquierda-derecha">
+            <div class="izquierda">
+                <div class="divLogo">
+                    <img class="img-responsive" src="assets/img/brinker.png">
+                </div>
+
+            </div>
             <div class="derecha">
                 <div id="menu">
                     <input type="checkbox" id="check">
                     <label for="check" class="checkbtn">
                     </label>
                     <ul>
-                        <li><a routerLink="/">Compras</a></li>
-                        <li><a class="selected" routerLink="/viajes">Viajes</a></li>
+                        <li><a routerLink="/">Voy a a Viajar</a></li>
+                        <li><a class="selected" routerLink="/viajes">Voy a viajar, quiero ser Brinker</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,11 +42,11 @@
             </div>
             <div class="formulario">
                 <div class="datos">
-                    <h2>Formulario</h2>
+                    <h2>Registra tu viaje y gana dinero</h2>
                     <input type="text" placeholder="Nombre">
                     <input type="text" placeholder="Telefono">
                     <input type="text" placeholder="Fecha de viaje">
-                    <input type="text" placeholder="Viaje desde Estados Unidos">
+                    <h2>Viaje desde Estados Unidos</h2>
                     <input type="text" placeholder="A">
                 </div>
 
@@ -51,21 +57,10 @@
 
         <div class="divTitulo3">
 
-            <div class="tarjetasPlanes fondo3" >
+            <div class="tarjetasPlanes fondo3">
 
                 <div class="personal">
-                    <h3>Pago Garantizado</h3>
-                    <div class="star">
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                        <fa-icon [icon]="faStar"></fa-icon>
-                    </div>
-                </div>
-
-                <div class="personal">
-                    <h3>Ingreso en 24 horas de haber realizado la entrega</h3>
+                    <h3>24 horas después de haber recibido el comprador su articulo</h3>
                     <div class="star">
                         <fa-icon [icon]="faStar"></fa-icon>
                         <fa-icon [icon]="faStar"></fa-icon>
@@ -89,7 +84,7 @@
         </div>
 
         <div class="franja2">
-            <h2>Como ganar dinero en este viaje</h2>
+            <h2>Como ganar dinero en mi viaje</h2>
         </div>
         <div class="cuadros">
             <div class="cuadro2">
@@ -97,7 +92,11 @@
 
             </div>
             <div class="cuadro3">
-                <h3>Compra el Producto Indicado</h3>
+                <h3>Te llegarán a tu correo los artículos que quieren comprar y sus respectivas comisiones</h3>
+
+            </div>
+            <div class="cuadro5">
+                <h3>Acepta el o los artículos que te llegaron en tu correo</h3>
 
             </div>
             <div class="cuadro4">
@@ -116,27 +115,21 @@
                 <carousel [cellsToShow]="1" [height]="400">
                     <div class="carousel-cell opiniones">
                         <div class="fondo">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
-                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
-                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
-                            <h3>Lorem ipsum</h3>
+                            <p>Con Brinker me salen GRATIS las comidas de mi viaje</p>
+                            <h3>Alberto R</h3>
                         </div>
 
                     </div>
                     <div class="carousel-cell opiniones">
                         <div class="fondo2">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
-                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
-                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
-                            <h3>Lorem ipsum</h3>
+                            <p>Me pagaron al toque lo que pague por el producto y mi comisión</p>
+                            <h3>Rita B</h3>
                         </div>
                     </div>
                     <div class="carousel-cell opiniones">
                         <div class="fondo3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum perferendis!
-                                Dolores eaque vel consequatur soluta deserunt eos deleniti, ut asperiores? Pariatur
-                                nostrum quasi, quam optio nesciunt totam repellat quas!</p>
-                            <h3>Lorem ipsum</h3>
+                            <p>En mi último viaje gane $500 dolares </p>
+                            <h3>Michelle T</h3>
                         </div>
                     </div>
                 </carousel>
@@ -169,37 +162,15 @@
                 <div class="listaPreguntas">
                     <div id="menu">
                         <ul>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-                            <li>
-                                <a href="">Lorem ipsum dolor</a>
-                            </li>
-
+                            <li *ngFor="let l of general" id="{{l.id}}"><a id="{{l.id+100}}" (click)="seleccionarPregunta(l.id)" >{{l.pregunta}}</a></li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="descripcioPregunta">
                     <div>
-                        <h4>Lorem ipsum </h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat est reprehenderit
-                            perferendis consequuntur consequatur deleniti? Facere at unde, tempora dolor, maiores in
-                            sed, quidem corrupti mollitia odio ratione alias!</p>
+                        <h4>{{tituloSeleccionado}} </h4>
+                        <p>{{contenidoSeleccionado}}</p>
                     </div>
                 </div>
             </div>
