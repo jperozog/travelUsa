@@ -5,7 +5,7 @@
         <div class="izquierda-derecha">
             <div class="izquierda">
                 <div class="divLogo">
-                    <img class="img-responsive" src="assets/img/brinker.png">
+                    <img class="img-responsive" src="assets/img/brinker2.png">
                 </div>
 
             </div>
@@ -15,8 +15,8 @@
                     <label for="check" class="checkbtn">
                     </label>
                     <ul>
-                        <li><a class="selected" routerLink="/">Voy a a Viajar</a></li>
-                        <li><a routerLink="/viajes">Voy a viajar, quiero ser Brinker</a></li>
+                        <li><a class="selected" routerLink="/">QUIERO COMPRAR EN USA</a></li>
+                        <li><a routerLink="/viajes">VOY A VIAJAR, QUIERO SER UN BRINKER </a></li>
                     </ul>
                 </div>
             </div>
@@ -28,10 +28,15 @@
             <div class="formulario">
                 <div class="datos">
                     <h2>Formulario</h2>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Telefono">
-                    <input type="email" placeholder="Correo">
-                    <input type="text" placeholder="Link de Producto">
+                    <form action="" #comprasForm="ngForm" (ngSubmit)="agregarCompra(comprasForm)">
+                        <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="compraService.compraDatos.nombre">
+                        <input type="text" placeholder="Telefono" name="telefono" [(ngModel)]="compraService.compraDatos.telefono">
+                        <input type="email" placeholder="Correo" name="correo" [(ngModel)]="compraService.compraDatos.correo">
+                        <input type="text" placeholder="Link de Producto" name="link" [(ngModel)]="compraService.compraDatos.link">
+                        <br>
+                        <button *ngIf="compraService.compraDatos.nombre != ''  && compraService.compraDatos.telefono != '' && compraService.compraDatos.correo != '' && compraService.compraDatos.link != ''"> Enviar Datos</button>
+                    </form>
+
                 </div>
 
             </div>
@@ -133,7 +138,7 @@
             <div style="background-image: url('https://images-na.ssl-images-amazon.com/images/I/61wwiGxFwML._AC_SL1082_.jpg');"
                 class="cuadro">
 
-                <h3>Tumbas Relief</h3>
+                <h3>Tums Antiacido</h3>
 
             </div>
 
@@ -215,8 +220,9 @@
                 <div class="listaPreguntas">
                     <div id="menu">
                         <ul>
-                            <li *ngFor="let l of general" id="{{l.id}}"><a id="{{l.id+100}}" (click)="seleccionarPregunta(l.id)" >{{l.pregunta}}</a></li>
-                            
+                            <li *ngFor="let l of general" id="{{l.id}}"><a id="{{l.id+100}}"
+                                    (click)="seleccionarPregunta(l.id)">{{l.pregunta}}</a></li>
+
                         </ul>
                     </div>
                 </div>

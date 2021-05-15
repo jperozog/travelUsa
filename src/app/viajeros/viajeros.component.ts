@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import {NgForm} from '@angular/forms'
+import {ComprasServicesService} from '../services/compras-services.service'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-viajeros',
@@ -14,7 +17,7 @@ export class ViajerosComponent implements OnInit {
     {
       id: 1,
       pregunta: "¿Cómo se garantiza mi pago?",
-      contenido: "Tu pago está asegurado y garantizado por Grabr. Los compradores pagan por adelantado y no pueden cancelar una vez pagan."
+      contenido: "Tu pago está asegurado y garantizado por Brinker. Los compradores pagan por adelantado y no pueden cancelar una vez pagan."
     },
     {
       id: 2,
@@ -42,7 +45,7 @@ export class ViajerosComponent implements OnInit {
       contenido: "Si el objeto no cabe en tu maleta, puedes sacarlo de su envoltorio original. Asegúrate de contactarnos para notificarnos y a su vez nosotros le notifiquemos al comprador de que su compra llegará sin envoltorio"
     }
   ]
-  constructor() { }
+  constructor(public compraService:ComprasServicesService) { }
 
   ngOnInit(): void {
   }
@@ -78,5 +81,26 @@ export class ViajerosComponent implements OnInit {
     });
     
   }
+
+  agregarCompra(form:NgForm){
+    
+    this.compraService.enviarDatosViaje(form.value).subscribe(res=>console.log(res),err=>console.log(err))
+  
+    this.compraService.viajeDatos.nombre = ''
+    this.compraService.viajeDatos.telefono = ''
+    this.compraService.viajeDatos.correo = ''
+    this.compraService.viajeDatos.fecha = ''
+    this.compraService.viajeDatos.a = ''
+    
+    Swal.fire({
+      position: 'top-end',
+    icon: 'success',
+    title: 'Datos Enviados con Exito!',
+    showConfirmButton: false,
+    timer: 1500});
+    
+    }
+
+    
 
 }

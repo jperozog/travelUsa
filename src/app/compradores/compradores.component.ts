@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import {NgForm} from '@angular/forms'
+import {ComprasServicesService} from '../services/compras-services.service'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-compradores',
@@ -52,9 +55,28 @@ export class CompradoresComponent implements OnInit {
       contenido: "Como comprador, estás cubierto por la garantía BRINKER, tu dinero no se le será entregado al comprador hasta que hayas confirmado la entrega de tu pedido. Tienes derecho a aceptar o no el artículo si el estado del artículo no es el acordado (color, cantidad, artículo incorrecto o si está dañado o roto). Asegúrate de inspeccionar tu pedido antes de confirmar la entrega. Los compradores tienen un periodo de 24 horas para reportar un pedido como dañado o incompleto. Recomendamos a los viajeros contratar seguro de viaje que cubra daños por pérdida de equipaje, etc. Si tu producto está dañado, roto o no es correcto, lo mejor es informarle a BRINKER inmediatamente. En algunos casos el BRINKER podrá traer un reemplazo. Caso contrario, la única solución es cancelar el pedido y te devolvemos al 100% tu dinero"
     },
   ]
-  constructor() { }
+  titularAlerta:string = "Tus Datos han sido enviados. Te contactaremos en breve."
+
+  constructor(public compraService:ComprasServicesService) { }
 
   ngOnInit(): void {
+  }
+
+  agregarCompra(form:NgForm){
+    
+  this.compraService.enviarDatosCompra(form.value).subscribe(res=>console.log(res),err=>console.log(err))
+
+  this.compraService.compraDatos.nombre = ''
+  this.compraService.compraDatos.telefono = ''
+  this.compraService.compraDatos.correo = ''
+  this.compraService.compraDatos.link = ''
+  
+  Swal.fire({
+    position: 'top-start',
+  icon: 'success',
+  title: 'Datos Enviados con Exito!',
+  showConfirmButton: false,
+  timer: 1500});
   }
 
   seleccionarPregunta(id:number){

@@ -5,7 +5,7 @@
         <div class="izquierda-derecha">
             <div class="izquierda">
                 <div class="divLogo">
-                    <img class="img-responsive" src="assets/img/brinker.png">
+                    <img class="img-responsive" src="assets/img/brinker2.png">
                 </div>
 
             </div>
@@ -15,8 +15,8 @@
                     <label for="check" class="checkbtn">
                     </label>
                     <ul>
-                        <li><a routerLink="/">Voy a a Viajar</a></li>
-                        <li><a class="selected" routerLink="/viajes">Voy a viajar, quiero ser Brinker</a></li>
+                        <li><a routerLink="/">QUIERO COMPRAR EN USA</a></li>
+                        <li><a class="selected" routerLink="/viajes">VOY A VIAJAR, QUIERO SER UN BRINKER</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,11 +43,21 @@
             <div class="formulario">
                 <div class="datos">
                     <h2>Registra tu viaje y gana dinero</h2>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Telefono">
-                    <input type="text" placeholder="Fecha de viaje">
-                    <h2>Viaje desde Estados Unidos</h2>
-                    <input type="text" placeholder="A">
+                    <form action="" #comprasForm="ngForm" (ngSubmit)="agregarCompra(comprasForm)">
+                        <input type="text" placeholder="Nombre" name="nombre"
+                            [(ngModel)]="compraService.viajeDatos.nombre">
+                        <input type="text" placeholder="Telefono" name="telefono"
+                            [(ngModel)]="compraService.viajeDatos.telefono">
+                        <input type="email" placeholder="Correo" name="correo"
+                            [(ngModel)]="compraService.viajeDatos.correo">
+                        <input type="text" placeholder="Fecha de viaje" name="fecha"
+                            [(ngModel)]="compraService.viajeDatos.fecha">
+                        <h2>Viaje desde Estados Unidos</h2>
+                        <input type="text" placeholder="A" name="a" [(ngModel)]="compraService.viajeDatos.a">
+                        <button
+                            *ngIf="compraService.viajeDatos.nombre != ''  && compraService.viajeDatos.telefono != '' && compraService.viajeDatos.correo != '' && compraService.viajeDatos.fecha != '' && compraService.viajeDatos.a != ''">
+                            Enviar Datos</button>
+                    </form>
                 </div>
 
             </div>
@@ -60,7 +70,7 @@
             <div class="tarjetasPlanes fondo3">
 
                 <div class="personal">
-                    <h3>24 horas después de haber recibido el comprador su articulo</h3>
+                    <h3>Recibe tu dinero 24 horas despues de que el comprador haya recibido su producto</h3>
                     <div class="star">
                         <fa-icon [icon]="faStar"></fa-icon>
                         <fa-icon [icon]="faStar"></fa-icon>
@@ -162,8 +172,9 @@
                 <div class="listaPreguntas">
                     <div id="menu">
                         <ul>
-                            <li *ngFor="let l of general" id="{{l.id}}"><a id="{{l.id+100}}" (click)="seleccionarPregunta(l.id)" >{{l.pregunta}}</a></li>
-                            
+                            <li *ngFor="let l of general" id="{{l.id}}"><a id="{{l.id+100}}"
+                                    (click)="seleccionarPregunta(l.id)">{{l.pregunta}}</a></li>
+
                         </ul>
                     </div>
                 </div>
