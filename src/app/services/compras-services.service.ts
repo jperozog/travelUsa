@@ -26,11 +26,11 @@ export class ComprasServicesService {
 
 
   enviarDatosCompra(compra:compra){
-    return this.http.post("http://201.249.147.139:81/maraveca/public/index.php/enviocorreos",compra)
+    return this.http.post("https://brinkerapp.herokuapp.com/mail/sendmail",compra)
   }
 
   enviarDatosViaje(viaje:compra){
-    return this.http.post("http://201.249.147.139:81/maraveca/public/index.php/enviocorreos2",viaje)
+    return this.http.post("https://brinkerapp.herokuapp.com/mail/sendmaila",viaje)
   }
 
 

@@ -804,6 +804,20 @@
                 border: none;
                 color: white;
                 border-radius: 5px;
+                cursor: pointer;
+            }
+            .button{
+                width: 15%;
+                background-color: gray;
+                padding: 2% 3%;
+                border: none;
+                color: white;
+                border-radius: 5px;
+
+                p{
+                    font-size: 13px;
+                    text-align: center;
+                }
             }
   
         }   
@@ -861,7 +875,7 @@
                 color: #01A0E2;
             }
             
-            input{
+            input,select{
                 width: 90%;
                 height: 50px;
                 border: none;
@@ -880,6 +894,20 @@
                 border: none;
                 color: white;
                 border-radius: 5px;
+                cursor: pointer;
+            }
+            .button{
+                width: 15%;
+                background-color: gray;
+                padding: 2% 3%;
+                border: none;
+                color: white;
+                border-radius: 5px;
+
+                p{
+                    font-size: 13px;
+                    text-align: center;
+                }
             }
   
         }   

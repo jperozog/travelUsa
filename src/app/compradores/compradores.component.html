@@ -34,7 +34,8 @@
                         <input type="email" placeholder="Correo" name="correo" [(ngModel)]="compraService.compraDatos.correo">
                         <input type="text" placeholder="Link de Producto" name="link" [(ngModel)]="compraService.compraDatos.link">
                         <br>
-                        <button *ngIf="compraService.compraDatos.nombre != ''  && compraService.compraDatos.telefono != '' && compraService.compraDatos.correo != '' && compraService.compraDatos.link != ''"> Enviar Datos</button>
+                        <button *ngIf="compraService.compraDatos.nombre != ''  && compraService.compraDatos.telefono.length >= 9 && compraService.compraDatos.correo.includes('@') && compraService.compraDatos.correo.includes('.com') && compraService.compraDatos.link != ''"> Enviar Datos</button>
+                        <div class="button" *ngIf="compraService.compraDatos.nombre == ''  || compraService.compraDatos.telefono.length < 9 || compraService.compraDatos.correo.includes('@') == false || compraService.compraDatos.correo.includes('.com') == false || compraService.compraDatos.link == ''"><p> Enviar Datos</p></div>
                     </form>
 
                 </div>
